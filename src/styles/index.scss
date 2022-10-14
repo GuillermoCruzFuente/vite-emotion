@@ -1,17 +1,17 @@
-@use './reset';
+@use 'reset';
+@use 'scrollbar';
 
 html {
-	background-color: #222;
-	// background-color: rgba(red, green, blue, alpha);
+	background-color: #fff;
 	font-family: 'Poppins', sans-serif;
 }
 
 body {
-	width: 100vw;
+	width: 100%;
 }
 
 :root {
-	--deep-purple: rgb(45, 6, 99);
-	--medium-purple: rgb(93, 14, 203);
+	--deep-purple: rgb(33, 6, 72);
+	--medium-purple: rgb(87, 16, 185);
 	--light-purple: rgb(128, 48, 240);
 }

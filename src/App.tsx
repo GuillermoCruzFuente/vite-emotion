@@ -1,34 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+//emotion
+import { css } from '@emotion/react'
 
-function App() {
-  const [count, setCount] = useState(0)
+const mainStyle = css({
+	color: '#fff',
+	width: '100%',
+	height: '100vh',
+	display: 'flex',
+	flexFlow: 'column',
+	alignItems: 'center',
+	justifyContent: 'center',
+})
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+const bigTitleStyle = css({
+	fontSize: 'clamp(1.5rem, 7vw, 5rem)',
+	lineHeight: '1',
+	backgroundImage: 'linear-gradient(45deg, var(--deep-purple), var(--medium-purple))',
+	backgroundSize: '100%',
+	backgroundClip: 'text',
+	textFillColor: 'transparent',
+	filter: 'drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.75))',
+})
+
+const textStyle = css({
+	color: '#999',
+	maxWidth: '40%',
+	textAlign: 'center',
+	marginTop: '2rem',
+})
+
+const App = () => {
+	return (
+		<main css={mainStyle}>
+			<h1 css={bigTitleStyle}>AnimePost</h1>
+
+			<p css={textStyle}>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis est
+				ducimus incidunt adipisci delectus exercitationem molestias vel officia
+				rerum aspernatur.
+			</p>
+		</main>
+	)
 }
 
 export default App

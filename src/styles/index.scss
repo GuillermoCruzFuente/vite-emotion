@@ -1,0 +1,17 @@
+@use './reset';
+
+html {
+	background-color: #222;
+	// background-color: rgba(red, green, blue, alpha);
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	width: 100vw;
+}
+
+:root {
+	--deep-purple: rgb(45, 6, 99);
+	--medium-purple: rgb(93, 14, 203);
+	--light-purple: rgb(128, 48, 240);
+}

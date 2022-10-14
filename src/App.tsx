@@ -1,19 +1,36 @@
 //emotion
 import { css } from '@emotion/react'
+import animesData from './data/anime'
+import AnimeCard from './components/AnimeCard'
 
-const mainStyle = css({
+const completeContainer = css({
+	minHeight: '100vh',
+	paddingBlock: '0px',
+})
+
+const containerCenter = css({
 	color: '#fff',
 	width: '100%',
-	height: '100vh',
 	display: 'flex',
 	flexFlow: 'column',
 	alignItems: 'center',
 	justifyContent: 'center',
+	paddingBlock: '5rem',
+})
+
+const cardsContainer = css({
+	width: '70%',
+	margin: '0 auto',
+	backgroundColor: 'coral',
+	display: 'grid',
+	gridAutoRows: 'auto',
+	gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 350px), 1fr))',
+	gap: '2rem',
 })
 
 const bigTitleStyle = css({
 	fontSize: 'clamp(1.5rem, 7vw, 5rem)',
-	lineHeight: '1',
+	lineHeight: '1.3',
 	backgroundImage: 'linear-gradient(45deg, var(--deep-purple), var(--medium-purple))',
 	backgroundSize: '100%',
 	backgroundClip: 'text',
@@ -30,15 +47,25 @@ const textStyle = css({
 
 const App = () => {
 	return (
-		<main css={mainStyle}>
-			<h1 css={bigTitleStyle}>AnimePost</h1>
+		<>
+			<header css={[containerCenter, completeContainer]}>
+				<h1 css={bigTitleStyle}>Lorem ipsum dolor sit</h1>
 
-			<p css={textStyle}>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis est
-				ducimus incidunt adipisci delectus exercitationem molestias vel officia
-				rerum aspernatur.
-			</p>
-		</main>
+				<p css={textStyle}>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+					est ducimus incidunt adipisci delectus exercitationem molestias vel
+					officia rerum aspernatur.
+				</p>
+			</header>
+			<main css={[containerCenter, { backgroundColor: '#222' }]}>
+				<h1 css={bigTitleStyle}>List</h1>
+				<div css={cardsContainer}>
+					{animesData.map((anime) => {
+						return <AnimeCard key={anime.title} {...anime} />
+					})}
+				</div>
+			</main>
+		</>
 	)
 }
 

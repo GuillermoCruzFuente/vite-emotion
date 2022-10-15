@@ -15,7 +15,7 @@ const containerCenter = css({
 	flexFlow: 'column',
 	alignItems: 'center',
 	justifyContent: 'center',
-	paddingBlock: '5rem',
+	paddingBlock: '3rem',
 })
 
 const cardsContainer = css({
@@ -24,11 +24,11 @@ const cardsContainer = css({
 	display: 'grid',
 	gridAutoRows: 'auto',
 	gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 250px), 1fr))',
-	gap: '3rem',
+	gap: '2rem',
 })
 
 const bigTitleStyle = css({
-	fontSize: 'clamp(1.5rem, 7vw, 5rem)',
+	fontSize: 'clamp(1.5rem, 7vw, 3.5rem)',
 	lineHeight: '1.3',
 	backgroundImage: 'linear-gradient(45deg, var(--deep-purple), var(--medium-purple))',
 	backgroundSize: '100%',
@@ -57,7 +57,7 @@ const App = () => {
 				</p>
 			</header>
 			<main css={[containerCenter, { backgroundColor: '#27042D' }]}>
-				<h1 css={bigTitleStyle}>List</h1>
+				<h1 css={[bigTitleStyle, { marginBottom: '3rem' }]}>Últimos agregados</h1>
 				<div css={cardsContainer}>
 					{animesData.map((anime) => {
 						return <AnimeCard key={anime.title} {...anime} />

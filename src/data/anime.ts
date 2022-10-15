@@ -17,16 +17,16 @@ const animes: Array<Anime> = [
 	{
 		title: 'Chainsaw Man',
 		description:
-			'La vida de pobreza de Denji cambia para siempre cuando se fusiona con su nueva mascota Pochita; una mezcla de perro y sierra mecánica. Ahora vive en la gran ciudad y es oficialmente un cazador de demonios. Sin embargo, deberá aprenderlo todo sobre su nuevo trabajo y sus nuevos superpoderes.',
+			'La vida de pobreza de Denji cambia para siempre cuando se fusiona con su nueva mascota Pochita; una mezcla de perro y sierra mecánica.',
 		poster: '/cOyU8ScRGKXChrRsxdrt6nYkzFh.jpg',
 		audio: 'JAP',
 		quality: '1080p',
 		status: 'Emision',
 	},
 	{
-		title: 'Kiseijuu: Sei no Kakuritsu',
+		title: 'Kiseijuu Sei no Kakuritsu',
 		description:
-			'Una especie de alienígenas parásitos desciende a la Tierra y se infiltra rápidamente en la humanidad introduciéndose en el cerebro de objetivos vulnerables; seres insaciables que adquieren el control total de su huésped y son capaces de transformarse para alimentarse de presas desprevenidas.',
+			'Una especie de alienígenas parásitos desciende a la Tierra y se infiltra rápidamente en la humanidad introduciéndose en el cerebro de objetivos vulnerables.',
 		poster: '/2ngHwPQhHGPpLkLQd2MTAI3iXPq.jpg',
 		status: 'Finalizado',
 		audio: 'JAP',
@@ -36,12 +36,42 @@ const animes: Array<Anime> = [
 	{
 		title: 'One Punch Man',
 		description:
-			'Saitama es un héroe que sólo se convirtió en héroe por diversión. Sin embargo, tras tres años de entrenamiento especial, se ha vuelto tan fuerte que es prácticamente invencible. De hecho, es demasiado fuerte: incluso sus oponentes más poderosos son eliminados de un solo golpe, y resulta que ser devastadoramente poderoso es en realidad un poco aburrido. Con su pasión por ser un héroe perdida junto con su pelo, y aún así enfrentándose a nuevos enemigos cada día, ¿cuánto tiempo más podrá seguir adelante?',
+			'Saitama es un héroe que sólo se convirtió en héroe por diversión. Sin embargo, tras tres años de entrenamiento especial, se ha vuelto tan fuerte que es prácticamente invencible.',
 		poster: '/iE3s0lG5QVdEHOEZnoAxjmMtvne.jpg',
 		audio: 'JAP',
 		sub: 'No',
 		quality: '1080p',
 		status: 'Finalizado',
+	},
+	{
+		title: 'Cyberpunk: Edgerunners',
+		description:
+			'En una distopía plagada de corrupción e implantes cibernéticos, un talentoso pero imprudente chico de la calle se esfuerza por convertirse en un forajido mercenario: un edgerunner.',
+		poster: '/4CgMd3q8vy4bodVqS2Mp9epORmU.jpg',
+		audio: 'JAP',
+		sub: 'Multi',
+		quality: '1080p',
+		status: 'Finalizado',
+	},
+	{
+		title: 'Isekai Ojisan',
+		description:
+			'Después de estar en coma durante 17 años, el tío de Takafumi, de mediana edad, se despierta de repente hablando un idioma irreconocible y con poderes mágicos.',
+		poster: '/vXWyuYKxGs7Lu0lIKyOMG5ZNIK.jpg',
+		audio: 'JAP',
+		sub: 'Multi',
+		quality: '1080p',
+		status: 'Emision',
+	},
+	{
+		title: 'SpyXFamily',
+		description:
+			'Todo el mundo tiene una parte de sí mismos que no puede mostrar a los demás. En una era en la que las naciones de todo el mundo se encuentran involucradas en una feroz guerra.',
+		poster: '/vaIREdPGZOnW9Jrs86mheVVlIQQ.jpg',
+		audio: 'JAP',
+		sub: 'Multi',
+		quality: '1080p',
+		status: 'Emision',
 	},
 ]
 

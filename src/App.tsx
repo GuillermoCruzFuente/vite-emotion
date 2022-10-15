@@ -19,13 +19,12 @@ const containerCenter = css({
 })
 
 const cardsContainer = css({
-	width: '70%',
+	width: '75%',
 	margin: '0 auto',
-	backgroundColor: 'coral',
 	display: 'grid',
 	gridAutoRows: 'auto',
-	gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 350px), 1fr))',
-	gap: '2rem',
+	gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 250px), 1fr))',
+	gap: '3rem',
 })
 
 const bigTitleStyle = css({
@@ -57,7 +56,7 @@ const App = () => {
 					officia rerum aspernatur.
 				</p>
 			</header>
-			<main css={[containerCenter, { backgroundColor: '#222' }]}>
+			<main css={[containerCenter, { backgroundColor: '#27042D' }]}>
 				<h1 css={bigTitleStyle}>List</h1>
 				<div css={cardsContainer}>
 					{animesData.map((anime) => {

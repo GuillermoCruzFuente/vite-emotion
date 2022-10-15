@@ -1,6 +1,6 @@
 type Audio = 'JAP' | 'ESP' | 'ENG'
 type Quality = '4K' | '1080p' | '720p'
-type Status = 'Emision' | 'Finalizado'
+type Status = boolean
 type Sub = 'EspLat' | 'Eng' | 'Multi' | 'No'
 
 export type Anime = {
@@ -21,14 +21,14 @@ const animes: Array<Anime> = [
 		poster: '/cOyU8ScRGKXChrRsxdrt6nYkzFh.jpg',
 		audio: 'JAP',
 		quality: '1080p',
-		status: 'Emision',
+		status: true,
 	},
 	{
 		title: 'Kiseijuu Sei no Kakuritsu',
 		description:
 			'Una especie de alienígenas parásitos desciende a la Tierra y se infiltra rápidamente en la humanidad introduciéndose en el cerebro de objetivos vulnerables.',
 		poster: '/2ngHwPQhHGPpLkLQd2MTAI3iXPq.jpg',
-		status: 'Finalizado',
+		status: false,
 		audio: 'JAP',
 		sub: 'EspLat',
 		quality: '1080p',
@@ -41,7 +41,7 @@ const animes: Array<Anime> = [
 		audio: 'JAP',
 		sub: 'No',
 		quality: '1080p',
-		status: 'Finalizado',
+		status: true,
 	},
 	{
 		title: 'Cyberpunk: Edgerunners',
@@ -51,7 +51,7 @@ const animes: Array<Anime> = [
 		audio: 'JAP',
 		sub: 'Multi',
 		quality: '1080p',
-		status: 'Finalizado',
+		status: false,
 	},
 	{
 		title: 'Isekai Ojisan',
@@ -61,7 +61,7 @@ const animes: Array<Anime> = [
 		audio: 'JAP',
 		sub: 'Multi',
 		quality: '1080p',
-		status: 'Emision',
+		status: true,
 	},
 	{
 		title: 'SpyXFamily',
@@ -71,7 +71,7 @@ const animes: Array<Anime> = [
 		audio: 'JAP',
 		sub: 'Multi',
 		quality: '1080p',
-		status: 'Emision',
+		status: true,
 	},
 ]
 

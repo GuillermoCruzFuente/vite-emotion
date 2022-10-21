@@ -148,7 +148,7 @@ const AnimeCard: FC<Anime> = (anime) => {
 
 				<a href={`#${anime.title}-xd`} css={cardLink}>
 					<img src={downloadIcon} alt='download' css={download} />
-					Ir a descargas
+					descargar capítulos
 				</a>
 			</div>
 		</article>

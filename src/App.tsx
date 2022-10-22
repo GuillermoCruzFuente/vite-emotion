@@ -2,6 +2,7 @@
 import { css } from '@emotion/react'
 import animesData from './data/anime'
 import AnimeCard from './components/AnimeCard'
+import Nav from './components/Nav'
 
 const completeContainer = css({
 	minHeight: '100vh',
@@ -18,6 +19,15 @@ const containerCenter = css({
 	paddingBlock: '3rem',
 })
 
+const containerLeftTop = css({
+	color: '#fff',
+	width: '100%',
+	display: 'flex',
+	flexFlow: 'column',
+	alignItems: 'flex-start',
+	justifyContent: 'flex-start',
+})
+
 const cardsContainer = css({
 	width: '75%',
 	margin: '0 auto',
@@ -28,36 +38,41 @@ const cardsContainer = css({
 })
 
 const bigTitleStyle = css({
-	fontSize: 'clamp(1.5rem, 7vw, 3.5rem)',
 	lineHeight: '1.3',
-	backgroundImage: 'linear-gradient(45deg, var(--deep-purple), var(--medium-purple))',
+	backgroundImage: 'linear-gradient(0deg, var(--deep-purple), var(--medium-purple))',
 	backgroundSize: '100%',
 	backgroundClip: 'text',
 	textFillColor: 'transparent',
 	filter: 'drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.75))',
 })
 
-const textStyle = css({
-	color: '#999',
-	maxWidth: '40%',
-	textAlign: 'center',
-	marginTop: '2rem',
+const bigFont = css({
+	fontSize: 'clamp(1.5rem, 7vw, 5rem)',
+})
+
+const midFont = css({
+	fontSize: 'clamp(1.5rem, 7vw, 3rem)',
+})
+
+const carrousel = css({
+	width: '100%',
+	height: '400px',
+	backgroundColor: '#000',
 })
 
 const App = () => {
 	return (
 		<>
-			<header css={[containerCenter, completeContainer]}>
-				<h1 css={bigTitleStyle}>Lorem ipsum dolor sit</h1>
-
-				<p css={textStyle}>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-					est ducimus incidunt adipisci delectus exercitationem molestias vel
-					officia rerum aspernatur.
-				</p>
+			<Nav />
+			<header css={[containerLeftTop]}>
+				<div css={[carrousel, containerCenter]}>
+					<h1>title goes here</h1>
+				</div>
 			</header>
 			<main css={[containerCenter, { backgroundColor: '#27042D' }]}>
-				<h1 css={[bigTitleStyle, { marginBottom: '3rem' }]}>Últimos agregados</h1>
+				<h1 css={[bigTitleStyle, midFont, { marginBottom: '3rem' }]}>
+					Últimos agregados
+				</h1>
 				<div css={cardsContainer}>
 					{animesData.map((anime) => {
 						return <AnimeCard key={anime.title} {...anime} />

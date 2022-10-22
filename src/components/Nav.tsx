@@ -8,9 +8,11 @@ const navMainContainer = css(
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'space-between',
+		zIndex: '100',
 	},
 	{
-		backgroundColor: '#222',
+		backgroundColor: '#000000aa',
+		backdropFilter: 'blur(10px)',
 	}
 )
 
@@ -24,18 +26,26 @@ const bigTitleStyle = css({
 })
 
 const bigFont = css({
-	fontSize: 'clamp(1.5rem, 7vw, 1.5rem)',
+	fontSize: 'clamp(1.5rem, 7vw, 2rem)',
 })
 
-const linksContainer = css({
-	display: 'flex',
-})
+const linksContainer = css(
+	{
+		display: 'flex',
+	},
+	css`
+		& > li {
+			list-style-type: none;
+		}
+	`
+)
 
 const linkItem = css({
 	color: '#fff',
 	marginRight: '1rem',
 	textDecoration: 'none',
-	listStyle: 'none',
+	fontWeight: '900',
+	textTransform: 'uppercase',
 })
 
 const Nav = () => {

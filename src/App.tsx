@@ -3,6 +3,7 @@ import { css } from '@emotion/react'
 import animesData from './data/anime'
 import AnimeCard from './components/AnimeCard'
 import Nav from './components/Nav'
+import Banner from './components/Banner'
 
 const completeContainer = css({
 	minHeight: '100vh',
@@ -54,20 +55,12 @@ const midFont = css({
 	fontSize: 'clamp(1.5rem, 7vw, 3rem)',
 })
 
-const carrousel = css({
-	width: '100%',
-	height: '400px',
-	backgroundColor: '#000',
-})
-
 const App = () => {
 	return (
 		<>
 			<Nav />
 			<header css={[containerLeftTop]}>
-				<div css={[carrousel, containerCenter]}>
-					<h1>title goes here</h1>
-				</div>
+				<Banner />
 			</header>
 			<main css={[containerCenter, { backgroundColor: '#27042D' }]}>
 				<h1 css={[bigTitleStyle, midFont, { marginBottom: '3rem' }]}>

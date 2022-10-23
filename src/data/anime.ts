@@ -39,7 +39,6 @@ const animes: Array<Anime> = [
 			'Saitama es un héroe que sólo se convirtió en héroe por diversión. Sin embargo, tras tres años de entrenamiento especial, se ha vuelto tan fuerte que es prácticamente invencible.',
 		poster: '/iE3s0lG5QVdEHOEZnoAxjmMtvne.jpg',
 		audio: 'JAP',
-		sub: 'No',
 		quality: '1080p',
 		status: true,
 	},

@@ -4,7 +4,7 @@ const navMainContainer = css(
 	{
 		position: 'fixed',
 		width: '100%',
-		padding: '0.75rem 2rem',
+		padding: '0.75rem 3rem',
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'space-between',

@@ -3,6 +3,7 @@ import { FC } from 'react'
 import { Anime } from '../data/anime'
 import downloadIcon from '../static/img/icons/download.svg'
 import AnimeStatus from './AnimeStatus'
+import Chip from './Chip'
 
 /**
  * @TODO lazy loading the img
@@ -61,11 +62,14 @@ const cardDetailsContainer = css({
 	flexFlow: 'column',
 })
 
-const cardDescriptionContainer = css({
-	fontSize: '0.75rem',
-	color: '#C3A1E8',
-	marginBottom: '1rem',
-})
+const cardDescriptionContainer = css(
+	{
+		fontSize: '0.75rem',
+		color: '#C3A1E8',
+		marginBottom: '1rem',
+	},
+	// { color: '#fff' }
+)
 
 const cardTitle = css({
 	fontSize: '1rem',
@@ -120,6 +124,14 @@ const download = css({
 	transitionTimingFunction: 'cubic-bezier(0.73, -0.58, 0.26, 1.5)',
 })
 
+const chipContainer = css({
+	display: 'flex',
+	alignItems: 'center',
+	justifyContent: 'space-between',
+	width: '100%',
+	// backgroundColor: '#222',
+})
+
 const AnimeCard: FC<Anime> = (anime) => {
 	const TOTAL_CHARACTERS = 100
 
@@ -143,7 +155,13 @@ const AnimeCard: FC<Anime> = (anime) => {
 
 			<div css={cardDetailsContainer}>
 				<div css={cardDescriptionContainer}>
-					<p>{computeTextDesciption()}</p>
+					<div css={chipContainer}>
+						<Chip>{anime.audio}</Chip>
+						<Chip>{anime.quality}</Chip>
+						<Chip>{anime.status ? 'emisión' : 'finalizado'}</Chip>
+						<Chip>{anime.sub ? anime.sub : 'noSub'}</Chip>
+					</div>
+					<p css={{ marginTop: '0.75rem' }}>{computeTextDesciption()}</p>
 				</div>
 
 				<a href={`#${anime.title}-xd`} css={cardLink}>
